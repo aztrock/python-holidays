@@ -66,7 +66,7 @@ class TestGuatemala(TestCase):
             "2018-06-30",
             "2018-08-15",
             "2018-09-15",
-            "2018-10-20",
+            "2018-10-22",
             "2018-11-01",
             "2018-12-25",
         )
@@ -79,7 +79,7 @@ class TestGuatemala(TestCase):
             "2019-04-18",
             "2019-04-19",
             "2019-04-20",
-            "2019-05-01",
+            "2019-04-29",
             "2019-07-01",
             "2019-08-15",
             "2019-09-15",
@@ -199,8 +199,8 @@ class TestGuatemala(TestCase):
             ("2024-05-01", "Labor Day"),
             ("2024-07-01", "Army Day"),
             ("2024-08-15", "Assumption Day"),
-            ("2024-09-15", "Independence day"),
+            ("2024-09-15", "Independence Day"),
             ("2024-10-20", "Revolution Day"),
-            ("2024-11-01", "All Saints Day"),
+            ("2024-11-01", "All Saints' Day"),
             ("2024-12-25", "Christmas Day"),
         )

@@ -42,7 +42,7 @@ class Guatemala(HolidayBase, ChristianHolidays, InternationalHolidays):
         EXPEDIENTE 5536-2018 (CC) start 17 abr 2020
         https://leyes.infile.com/index.php?id=181&id_publicacion=81051
         """
-        if self._year <= 2018 or self._is_monday(dt):
+        if dt <= date(2018, OCT, 17) or self._is_monday(dt):
             return None
         self._add_holiday(
             self[dt],
@@ -68,10 +68,9 @@ class Guatemala(HolidayBase, ChristianHolidays, InternationalHolidays):
         self._add_holy_saturday(tr("Sabado Santo"))
 
         # Labor Day.
-        if year == 2018:
-            self._move_holiday(self._add_labor_day(tr("Dia del Trabajo")))
-        else:
-            self._add_labor_day(tr("Dia del Trabajo"))
+        dt = self._add_labor_day(tr("Dia del Trabajo"))
+        if year == 2019:
+            self._move_holiday(dt)
 
         # Army Day.
         self._move_holiday(self._add_holiday(tr("Dia del Ejército"), JUN, 30))
@@ -83,10 +82,9 @@ class Guatemala(HolidayBase, ChristianHolidays, InternationalHolidays):
         self._add_holiday(tr("Día de la Independencia"), SEP, 15)
 
         # Revolution Day
-        if year in [2018, 2019]:
-            self._move_holiday(self._add_holiday(tr("Dia de la Revolución"), OCT, 20))
-        else:
-            self._add_holiday(tr("Dia de la Revolución"), OCT, 20)
+        dt = self._add_holiday(tr("Dia de la Revolución"), OCT, 20)
+        if year in {2018, 2019}:
+            self._move_holiday(dt)
 
         # All Saints' Day.
         self._add_all_saints_day(tr("Dia de Todos los Santos"))
