@@ -313,7 +313,9 @@ class HolidayBase(Dict[date, str]):
                     for translation in locale_path.rglob(f"{name}.mo")
                 }
                 if language and language in translations:
-                    translator = translation(name, languages=[language], localedir=str(locale_path))
+                    translator = translation(
+                        name, languages=[language], localedir=str(locale_path)
+                    )
                 else:
                     translator = translation(name, fallback=True, localedir=str(locale_path))
                 self.tr = translator.gettext
